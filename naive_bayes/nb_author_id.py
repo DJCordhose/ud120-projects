@@ -29,6 +29,7 @@ clf = GaussianNB()
 clf.fit(features_train, labels_train)
 
 print "training time:", round(time()-t0, 3), "s"
+### training time: 6.393 s
 
 t1 = time()
 print 'starting prediction'
@@ -36,6 +37,7 @@ print 'starting prediction'
 pred = clf.predict(features_test)
 
 print "prediction time:", round(time()-t1, 3), "s"
+### prediction time: 0.188 s
 
 t2 = time()
 print 'starting scoring'
@@ -58,7 +60,7 @@ print (total)
 ### you might need to import an sklearn module
 accuracy = 1.0 * matches /  total
 print accuracy
-
+### 0.973265073948
 
 ### http://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html#sklearn.metrics.accuracy_score
 
@@ -66,7 +68,7 @@ from sklearn.metrics import accuracy_score
 
 score = accuracy_score(labels_test, pred)
 print score
-
+### 0.973265073948
 print "scoring time:", round(time()-t2, 3), "s"
 
 
